@@ -1,0 +1,70 @@
+<div *ngIf="!loading">
+  <!-- heading -->
+  <div class="heading">
+    <p class="text">Transaction History</p>
+    <span>
+      <div class="search">
+        <i class="fas fa-search"></i>
+        <input
+          #search
+          type="text"
+          placeholder="Search"
+          (keyup)="tableSearch(search.value)"
+        />
+      </div>
+      <div class="sidebutton">
+        <i class="fas fa-filter"></i>
+        <p class="textbox">Filter</p>
+      </div>
+      <div class="sidebutton">
+        <i class="fas fa-file"></i>
+        <p class="textbox">Export</p>
+      </div>
+    </span>
+  </div>
+  <!-- table -->
+  <div class="table table-container">
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Date <i class="fa-solid fa-angle-down"></i></th>
+          <th>Name <i class="fa-solid fa-angle-down"></i></th>
+          <th>Status <i class="fa-solid fa-angle-down"></i></th>
+          <th>Type <i class="fa-solid fa-angle-down"></i></th>
+          <th>Time <i class="fa-solid fa-angle-down"></i></th>
+          <th>Amount <i class="fa-solid fa-angle-down"></i></th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of transaction">
+          <td>{{ getFormattedDate(item.date) }}</td>
+          <td>{{ item.name }}</td>
+          <td>
+            <span
+              [ngStyle]="
+                item.status === 'Success'
+                  ? { color: 'green' }
+                  : item.status === 'Failed'
+                  ? { color: 'red' }
+                  : { color: 'yellow' }
+              "
+              >{{ item.status }}</span
+            >
+          </td>
+          <td>
+            <p>{{ item.type }}</p>
+          </td>
+          <td>
+            <p>{{ getTimeFromDateISOString(item.date) }}</p>
+          </td>
+          <td>${{ item.amount }}</td>
+          <td (click)="togglePopup(item)">
+            <i id="openPopupButton" class="fa-solid fa-ellipsis"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<app-pop-up [message]="popupdata"></app-pop-up>

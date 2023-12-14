@@ -1,0 +1,166 @@
+// Sticky top
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+// Notification
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--main-theme-color);
+
+  p {
+    width: 100%;
+    color: var(--main-bg-color);
+    text-align: center;
+    margin: 8px; // Remove default margin for the paragraph
+  }
+
+  button {
+    background: var(--main-bg-color);
+    color: var(--main-theme-color);
+    border-radius: 8px;
+    height: 35px;
+    cursor: pointer;
+  }
+
+  span {
+    i {
+      color: var(--main-bg-color);
+      cursor: pointer; // Add a cursor pointer for better user interaction
+    }
+  }
+}
+
+// Overview heading
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // Logo
+  .logo {
+    width: 12.6%;
+    margin: 10px;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+      width: 100%;
+      font-size: x-large;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+
+    img {
+      width: 20%;
+      cursor: pointer;
+    }
+
+    span {
+
+      i {
+        color: black;
+        cursor: pointer; // Add a cursor pointer for better user interaction
+
+      }
+    }
+  }
+
+  // Overview
+  .overview {
+    width: 87.4%;
+    height: 30px;
+    margin: 10px;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5%;
+    background-color: var(--main-bg-color);
+
+
+    .headingName {
+      padding: 0;
+      margin: 0;
+      color: var(--main-theme-color);
+      font-size: xx-large;
+      font-weight: bolder;
+    }
+
+    p {
+      width: 100%;
+      color: var(--main-theme-color);
+      text-align: center;
+      margin: 8px; // Remove default margin for the paragraph
+    }
+
+    .Search {
+      background-color: var(--border-color);
+      padding: 12px;
+      width: 40%;
+      border-radius: 10px;
+
+      i {
+        font-size: large;
+      }
+
+      input {
+        margin-left: 10px;
+        border: none;
+        width: 80%;
+        background-color: #f5f5f500;
+        padding: 5px;
+
+        &:focus {
+          outline: none; // Remove the border when the input is focused
+        }
+      }
+    }
+
+    span {
+      display: flex;
+
+      .icon {
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        padding: 15px;
+        color: var(--main-theme-color);
+        cursor: pointer; // Add a cursor pointer for better user interaction
+        margin-left: 10px;
+
+        i {
+
+          font-size: x-large;
+
+        }
+
+        label {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: xx-small;
+          background-color: var(--main-theme-color);
+          color: var(--main-bg-color);
+          padding: 5px;
+          border-radius: 50%;
+          width: 6px;
+          height: 6px;
+          margin: 0;
+          margin-top: -5px;
+          margin-left: -8px;
+        }
+      }
+
+    }
+  }
+}

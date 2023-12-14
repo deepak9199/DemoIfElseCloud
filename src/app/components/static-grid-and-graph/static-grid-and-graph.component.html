@@ -1,0 +1,81 @@
+<div *ngIf="!loading">
+  <!-- heading -->
+  <div class="heading">
+    <p>Money Statictics</p>
+    <span>
+      <select name="" id="">
+        <option selected value="Month">Month</option>
+      </select>
+      <i class="fa-solid fa-ellipsis"></i>
+    </span>
+  </div>
+  <!-- amount -->
+  <div class="container">
+    <div class="child">
+      <p class="text">Total Income</p>
+      <p class="amount">
+        ${{ moneyStatistics.total_income.value | numberFormat }}
+      </p>
+      <div class="per">
+        <i
+          [ngStyle]="{ color: moneyStatistics.total_income.trend_color }"
+          class="fa-solid fa-chart-line"
+        >
+          {{ moneyStatistics.total_income.trend }}%%</i
+        >
+        <p class="dif">
+          <span> from last month </span>
+        </p>
+      </div>
+    </div>
+    <div class="childmiddle">
+      <p class="text">Total Expense</p>
+      <p class="amount">
+        ${{ moneyStatistics.total_expense.value | numberFormat }}
+      </p>
+      <div class="per">
+        <i
+          [ngStyle]="{ color: moneyStatistics.total_expense.trend_color }"
+          class="fa-solid fa-chart-line"
+        >
+          {{ moneyStatistics.total_expense.trend }}%</i
+        >
+        <p class="dif">
+          <span> from last month </span>
+        </p>
+      </div>
+    </div>
+    <div class="child">
+      <p class="text">Total Investment</p>
+      <p class="amount">
+        ${{ moneyStatistics.total_investment.value | numberFormat }}
+      </p>
+      <div class="per">
+        <i
+          [ngStyle]="{ color: moneyStatistics.total_investment.trend_color }"
+          class="fa-solid fa-chart-line"
+        >
+          {{ moneyStatistics.total_investment.trend }}%%</i
+        >
+        <p class="dif">
+          <span> from last month </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- graph -->
+  <div class="chart">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [dataLabels]="chartOptions.dataLabels"
+      [plotOptions]="chartOptions.plotOptions"
+      [yaxis]="chartOptions.yaxis"
+      [legend]="chartOptions.legend"
+      [fill]="chartOptions.fill"
+      [stroke]="chartOptions.stroke"
+      [tooltip]="chartOptions.tooltip"
+      [xaxis]="chartOptions.xaxis"
+    ></apx-chart>
+  </div>
+</div>

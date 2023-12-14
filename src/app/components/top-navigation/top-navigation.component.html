@@ -1,0 +1,49 @@
+<div class="sticky">
+  <!-- top notification -->
+  <div *ngIf="!close" class="notification">
+    <p>
+      Stay updated on our lastet feature by reciving notification from us!
+      <button>Learn More</button>
+    </p>
+    <span>
+      <i
+        (click)="closeNotification()"
+        class="fa fa-times"
+        aria-hidden="true"
+      ></i>
+    </span>
+  </div>
+  <!-- overview heading -->
+  <div class="heading">
+    <div class="logo">
+      <img src="assets/logo.png" alt="" />
+      <h4>Hexa Bank</h4>
+      <span>
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </span>
+    </div>
+
+    <div class="overview">
+      <a class="headingName">Overview</a>
+      <div class="Search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Search anything hear...."
+        />
+      </div>
+      <span>
+        <div class="icon">
+          <i class="fa fa-envelope" aria-hidden="true"> </i>
+          <label class="countnotification"><a>5</a></label>
+        </div>
+        <div class="icon">
+          <i class="fa fa-bell" aria-hidden="true"> </i>
+          <label class="countnotification"><a>5</a></label>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>

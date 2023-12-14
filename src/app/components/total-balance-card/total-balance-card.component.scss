@@ -1,0 +1,69 @@
+div {
+  background-color: var(--main-bg-color);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+
+  .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    margin: 0;
+    padding: 5px;
+
+    p {
+      font-size: x-large;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    i {
+      font-size: large;
+    }
+  }
+
+  p {
+    font-size: xxx-large;
+    padding-left: 1%;
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--main-theme-color);
+  }
+
+  .perbar {
+    margin: 1.5% 1% 0 1%;
+    padding: 0;
+    background-color: var(--border-color);
+
+    .per {
+      width: 30%;
+      padding: 0.5%;
+      margin: 0;
+      background-color: var(--main-theme-color);
+    }
+  }
+
+  .monthlimit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1% 0;
+    padding: 0;
+    width: 99%;
+
+    p {
+      font-size: small;
+      margin: 0;
+      color: var(--border-color);
+    }
+
+    .avilableamount {
+      color: var(--main-theme-color);
+
+      span {
+        color: var(--border-color);
+      }
+    }
+  }
+}

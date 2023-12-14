@@ -1,0 +1,95 @@
+div {
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--main-bg-color);
+  border-radius: 20px;
+
+  .heading {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      margin: 0;
+      font-size: x-large;
+      color: var(--main-theme-color);
+    }
+
+    select {
+      padding: 10px;
+      border-radius: 10px;
+      margin: 5px;
+      border-color: var(--border-color);
+
+    }
+
+    i {
+      font-size: large;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    .child,
+    .childmiddle {
+      width: 33.33%;
+      margin: 0;
+
+      .text {
+        margin: 0;
+        color: var(--main-theme-color);
+      }
+
+      .amount {
+        margin: 0;
+        margin-top: 6%;
+        font-size: xx-large;
+        color: var(--main-theme-color);
+      }
+
+      .per {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        font-size: x-small;
+
+        i {
+          font-size: smaller;
+          color: rgb(0, 255, 0);
+        }
+
+        .dif {
+          margin-left: 2%;
+
+          span {
+            color: rgba(0, 0, 0, 0.219);
+          }
+        }
+      }
+    }
+
+    .childmiddle {
+      border-left: 2px solid var(--border-color);
+      border-right: 2px solid var(--border-color);
+      border-radius: 0;
+
+      .per {
+        i {
+          font-size: smaller;
+        }
+      }
+    }
+  }
+
+  .chart {
+    margin: 0;
+    padding: 0;
+  }
+}

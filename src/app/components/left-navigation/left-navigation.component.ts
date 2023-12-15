@@ -7,10 +7,5 @@ import { Component } from '@angular/core';
 })
 export class LeftNavigationComponent {
   constructor() {}
-  closeNav() {
-    document.getElementById('mySidenav').style.width = '0';
-  }
-  openNav() {
-    document.getElementById('mySidenav').style.width = '250px';
-  }
+
 }

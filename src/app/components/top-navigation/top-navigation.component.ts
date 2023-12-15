@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class TopNavigationComponent {
   close: boolean = false;
+
+  // function for close notification
   closeNotification() {
     this.close = true;
   }

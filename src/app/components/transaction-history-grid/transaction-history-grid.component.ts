@@ -19,25 +19,10 @@ export class TransactionHistoryGridComponent {
 
   ngOnInit() {
     this.getdata();
-    document.addEventListener('DOMContentLoaded', function () {
-      const openButton = document.getElementById('openPopupButton');
-      const closeButton = document.getElementById('closePopupButton');
-      const popupContainer = document.getElementById('popupContainer');
-
-      if (openButton && closeButton && popupContainer) {
-        openButton.addEventListener('click', function () {
-          popupContainer.style.display = 'flex';
-        });
-
-        closeButton.addEventListener('click', function () {
-          popupContainer.style.display = 'none';
-        });
-      }
-    });
   }
   // pop up display
   togglePopup(data: Transaction) {
-    this.popupdata=data
+    this.popupdata = data;
     console.log(this.popupdata);
     this.sharedservice.triggerFunctionPopup();
   }

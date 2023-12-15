@@ -4,11 +4,13 @@ div {
   background-color: var(--main-bg-color);
   border-radius: 20px;
   width: 92%;
-
+  font-weight: bold;
+  // line
   hr {
     width: 90%;
   }
 
+  // heading
   .heading {
     display: flex;
     width: 90%;
@@ -34,6 +36,7 @@ div {
     }
   }
 
+  // card
   .card {
     width: 90%;
 
@@ -60,6 +63,7 @@ div {
     }
   }
 
+  // quick actions
   .quickaction {
     width: 92%;
 
@@ -112,6 +116,7 @@ div {
     }
   }
 
+  //  savinh paln
   .savingplan {
     padding: 0;
     margin: 0;

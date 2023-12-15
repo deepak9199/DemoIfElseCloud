@@ -3,7 +3,7 @@ div {
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-
+  font-weight: bold;
   .heading {
     margin: 0;
     display: flex;
@@ -83,6 +83,9 @@ div {
       border-collapse: collapse;
       margin-bottom: 20px;
 
+      td{
+        font-weight: bolder;
+      }
       th,
       td {
         padding: 10px;
@@ -91,7 +94,7 @@ div {
 
       th p {
         margin: 0;
-        color: rgba(0, 0, 0, 0.247);
+        color: rgba(0, 0, 0, 0.062);
       }
 
       td span {
@@ -100,14 +103,16 @@ div {
         border-radius: 10px;
         color: yellow;
       }
-
+      td p {
+        color: var(--border-color);
+      }
       td i {
         cursor: pointer;
-        font-size: smaller;
+        font-size: large;
       }
 
       th {
-        background-color: var(--border-color);
+        background-color: var(--main-theme-bg-color);
         height: 30px;
         color: var(--border-color);
       }

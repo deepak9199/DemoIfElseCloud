@@ -25,13 +25,17 @@
     color: var(--main-theme-color);
     border-radius: 8px;
     height: 35px;
+    margin-left: 1%;
     cursor: pointer;
   }
 
   span {
+    width: 1%;
+
     i {
       color: var(--main-bg-color);
       cursor: pointer; // Add a cursor pointer for better user interaction
+      padding-right: 2%;
     }
   }
 }
@@ -102,7 +106,7 @@
     }
 
     .Search {
-      background-color: var(--border-color);
+      background-color: var(--main-theme-bg-color);
       padding: 12px;
       width: 40%;
       border-radius: 10px;
@@ -140,7 +144,7 @@
         i {
 
           font-size: x-large;
-
+          margin-left: 20%;
         }
 
         label {
